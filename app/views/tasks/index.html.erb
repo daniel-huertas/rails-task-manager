@@ -1,0 +1,31 @@
+<h1>Task Manager</h1>
+
+<%= link_to "Add a task", new_task_path %>
+
+
+<% @tasks.each do |task| %>
+
+<p>
+<strong> Name of the task: </strong>
+<%= task.name %>
+</p>
+
+<p>
+<strong> Status of the task: </strong>
+<%= task.done %>
+</p>
+
+<ul>
+ <li> <%= link_to "Learn more", task_path(task) %></li>
+ <li> <%= link_to "Edit this task", edit_task_path(task) %> </li>
+ <li> <%= link_to "Delete this task", task_path(task), method:"delete" %></li>
+
+</ul>
+
+
+
+<p>
+---------------------------
+</p>
+
+<% end %>

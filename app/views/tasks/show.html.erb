@@ -1,0 +1,13 @@
+<h1><%= @task.name %></h1>
+
+<% if @task.done == true %>
+  <p> This task is already done! </p>
+<% else %>
+  <p> You still need to do this task! </p>
+<% end %>
+
+<br> <br>
+
+<%= link_to "Back to your tasks list", tasks_path %>
+
+
